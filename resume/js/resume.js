@@ -2,9 +2,9 @@ window.onscroll = function() {changeNavBG()};
 
 function changeNavBG() {
     if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
-        document.getElementById("navbar").classList.add("navbarNewStyle");
+        document.getElementById("navbar_1").classList.add("navbarNewStyle");
     } else {
-        document.getElementById("navbar").classList.remove("navbarNewStyle");
+        document.getElementById("navbar_1").classList.remove("navbarNewStyle");
     }
 }
 
@@ -30,3 +30,21 @@ function departMarquee(){
     marquee[1].style.animationDuration = "16s";
     marquee[2].style.animationDuration = "15s";
 }
+
+function showNav(){
+    let nav_2 = document.getElementById("siderbar");
+    nav_2.style.display = "block";
+    
+    // window.addEventListener("click", function(){
+    //     if(document.getElementById("siderbar").style.display === "block"){
+    //         document.querySelector(".siderbar").style.display = "none";
+    //     }
+    // });
+
+}
+
+function closeSidebar(){
+    let nav_2 = document.getElementById("siderbar");
+    nav_2.style.display = "none";
+}
+

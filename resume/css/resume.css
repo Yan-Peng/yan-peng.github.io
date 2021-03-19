@@ -8,7 +8,34 @@
     transition: 0.5s ease-in-out;
 }
 
-.nav-item {
+.navbar_1 {
+    position: fixed; 
+    top: 0; 
+    z-index: 2;
+}
+
+.siderbar{
+    display: none;
+    z-index: 3;
+    position: fixed;
+    right: 0;
+    top: 0;
+    width: 25vw;
+    height: 100vh;
+    background-color: gray;
+    transition: 1s ease;
+}
+
+.siderbar li a{
+    color: black;
+    font-size: 4vw;
+}
+
+.siderbar .closeNav{
+    text-decoration: none;
+}
+
+.navbar .nav-item {
     font-size: 2vw;
     font-family: 'Akaya Telivigala', cursive; /* 英文字體 */
 }
@@ -16,6 +43,22 @@
 .navbar .nav-item:hover{
     font-weight: 900;
 }
+
+.navbar .icon{
+    display: none;
+}
+
+@media only screen and (max-width: 600px){
+    .navbar .icon{
+        display: block;
+        font-size: 2.5rem;
+    }
+
+    .navbar .selection{
+        display: none;
+    }
+}
+
 
 .header{
     position: relative;
@@ -134,7 +177,7 @@
 
 @keyframes marquee {
     0% {transform: translate(100%, 0%);}
-    100% {transform: translate(-50%, 0%);}
+    100% {transform: translate(-200%, 0%);}
 }
 
 .contact h1{
@@ -145,7 +188,7 @@
 }
 
 .contact div{
-    font-size: 2rem;
+    font-size: 2vw;
     /* line-height: 1rem; */
 }
 
@@ -157,7 +200,12 @@ footer{
 
 @media only screen and (max-width: 600px){
     .marquee-area img{
-        width: 10vw;
-        height: 10vw;
+        width: 5vw;
+        height: 5vw;
+    }
+
+    .contact div{
+        font-size: 5vw;
+        /* line-height: 1rem; */
     }
 }
