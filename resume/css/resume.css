@@ -20,7 +20,7 @@
     position: fixed;
     right: 0;
     top: 0;
-    width: 25vw;
+    width: 30vw;
     height: 100vh;
     background-color: gray;
     transition: 1s ease;
@@ -200,8 +200,10 @@ footer{
 
 @media only screen and (max-width: 600px){
     .marquee-area img{
-        width: 5vw;
-        height: 5vw;
+        /* width: 5vw;
+        height: 5vw; */
+        width: 2rem;
+        height: 2rem;
     }
 
     .contact div{
