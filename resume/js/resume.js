@@ -31,20 +31,35 @@ function departMarquee(){
     marquee[2].style.animationDuration = "15s";
 }
 
+let navOverlay = document.getElementById("overlaySide");
 function showNav(){
     let nav_2 = document.getElementById("siderbar");
     nav_2.style.display = "block";
-    
-    // window.addEventListener("click", function(){
-    //     if(document.getElementById("siderbar").style.display === "block"){
-    //         document.querySelector(".siderbar").style.display = "none";
-    //     }
-    // });
 
+    navOverlay.style.display = "block";
+    navOverlay.style.opacity = 0.3;
 }
 
 function closeSidebar(){
     let nav_2 = document.getElementById("siderbar");
     nav_2.style.display = "none";
+
+    navOverlay.style.display = "none";
+    navOverlay.style.opacity = 0;
 }
 
+
+document.getElementById("overlaySide").addEventListener("click", function() {
+    closeSidebar();
+});
+
+// let item = document.getElementsByClassName("item");
+// for(let i = 0; i < item.length; i++){
+    // item[0].addEventListener("mousemove", function(){
+    //     alert("hello");
+    //     document.querySelector(".about .item .textBox").style.transform = "translate(0%, 50%);";
+    //     document.querySelector(".about .item .overlay").style.height = "100%";
+    //     document.querySelector(".about .item img").style.opacity = 0.7;
+    //     document.querySelector(".about .item img").style.boxShadow = "2px 2px 10px 10px grey";
+    // });
+// }
