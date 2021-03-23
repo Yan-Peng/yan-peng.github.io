@@ -19,13 +19,13 @@
     background: white;
     height: 100vh;
     width: 100vw;
-    z-index: 3;
+    z-index: 4;
     position: fixed;
 }
 
 .siderbar{
     display: none;
-    z-index: 4;
+    z-index: 5;
     position: fixed;
     right: 0;
     top: 0;
@@ -168,26 +168,54 @@
     cursor: pointer;
 }
 
-.marquee-area{
+.showPic-area{
     font-family: 'Akaya Telivigala', cursive; /* 英文字體 */
+    text-align: center;
+    background-color: wheat;
+    /* position: relative; */
 }
 
-
-.marquee-area img{
+.showPic-area img{
     width: 5rem;
     height: 5rem;
 }
 
-.marquee {
+.pre, .next {
+    width: 85vw;
+    margin: 1vh auto;
+    font-size: 3vw;
+    cursor: pointer;
+}
+
+.indicators li{
+    display: inline-block;
+    width: 1.5vw;
+    height: 1.5vw;
+    border: 1px black solid;
+    border-radius: 1.5vw;
+    cursor: pointer;
+}
+
+/* .marquee-area{ */
+    /* font-family: 'Akaya Telivigala', cursive; 英文字體 */
+/* } */
+
+
+/* .marquee-area img{
+    width: 5rem;
+    height: 5rem;
+} */
+
+/* .marquee {
     animation: marquee linear infinite;
     line-height: 90px;
     font-size: 2rem;
-}
+} */
 
-@keyframes marquee {
+/* @keyframes marquee {
     0% {transform: translate(100%, 0%);}
     100% {transform: translate(-200%, 0%);}
-}
+} */
 
 .contact h1{
     margin-bottom: 0.5rem;
@@ -208,11 +236,23 @@ footer{
 }
 
 @media only screen and (max-width: 600px){
-    .marquee-area img{
-        /* width: 5vw;
-        height: 5vw; */
+    /* .marquee-area img{
         width: 2rem;
         height: 2rem;
+    } */
+
+    .showPic-area img{
+        width: 15vw;
+        height: 15vw;
+    }
+
+    .pre, .next {
+        font-size: 2rem;
+    }
+
+    .indicators li{
+        width: 3vw;
+        height: 3vw;
     }
 
     .contact div{

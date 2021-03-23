@@ -23,13 +23,13 @@ function showSlide(){
     setTimeout(showSlide, 2000);
 }
 
-departMarquee();
-function departMarquee(){
-    let marquee = document.getElementsByClassName("marquee");
-    marquee[0].style.animationDuration = "17s";
-    marquee[1].style.animationDuration = "16s";
-    marquee[2].style.animationDuration = "15s";
-}
+// departMarquee();
+// function departMarquee(){
+//     let marquee = document.getElementsByClassName("marquee");
+//     marquee[0].style.animationDuration = "17s";
+//     marquee[1].style.animationDuration = "16s";
+//     marquee[2].style.animationDuration = "15s";
+// }
 
 let navOverlay = document.getElementById("overlaySide");
 function showNav(){
@@ -53,13 +53,46 @@ document.getElementById("overlaySide").addEventListener("click", function() {
     closeSidebar();
 });
 
-// let item = document.getElementsByClassName("item");
-// for(let i = 0; i < item.length; i++){
-    // item[0].addEventListener("mousemove", function(){
-    //     alert("hello");
-    //     document.querySelector(".about .item .textBox").style.transform = "translate(0%, 50%);";
-    //     document.querySelector(".about .item .overlay").style.height = "100%";
-    //     document.querySelector(".about .item img").style.opacity = 0.7;
-    //     document.querySelector(".about .item img").style.boxShadow = "2px 2px 10px 10px grey";
-    // });
-// }
+
+let showPic = document.getElementsByClassName("showPic");
+let indicator_item = document.getElementsByClassName("indicator-item");
+let currentIndex = 0;
+function carouselInitial(){  //讓所有Pic消失
+    for(let i = 1; i < showPic.length; i++){ 
+        showPic[i].style.display = "none";
+    }
+    indicator_item[currentIndex].style.backgroundColor = "black";
+
+    for(let i = 0; i < indicator_item.length; i++){
+        indicator_item[i].addEventListener("click", function(){
+            showPic[currentIndex].style.display = "none";
+            indicator_item[currentIndex].style.backgroundColor = "transparent";
+            currentIndex = i;
+            showPic[currentIndex].style.display = "block";
+            indicator_item[currentIndex].style.backgroundColor = "black";
+        });
+    }
+}
+carouselInitial();
+
+document.getElementById("next").addEventListener("click", function(){
+    showPic[currentIndex].style.display = "none";
+    indicator_item[currentIndex].style.backgroundColor = "transparent";
+    currentIndex++;
+    if(currentIndex >= 3){
+        currentIndex = 0;
+    }
+    showPic[currentIndex].style.display = "block";
+    indicator_item[currentIndex].style.backgroundColor = "black";
+});
+
+document.getElementById("pre").addEventListener("click", function(){
+    showPic[currentIndex].style.display = "none";
+    indicator_item[currentIndex].style.backgroundColor = "transparent";
+    currentIndex--;
+    if(currentIndex < 0){
+        currentIndex = 2;
+    }
+    showPic[currentIndex].style.display = "block";
+    indicator_item[currentIndex].style.backgroundColor = "black";
+});
