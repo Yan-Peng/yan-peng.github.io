@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-hants-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Bennis履歷表">
+    <meta name="author" content="Bennis">
+    <link rel="stylesheet" href="./css/resume.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>Bennis履歷表-我的履歷</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a class="active" href="resume.html">我的履歷</a></li>
+                <li>
+                    <i class="fas fa-bars" onclick="showList();"></i>
+                    <img src="./images/Bennis-font.png" alt="Logo" title="Logo"></li>
+                <li class="dropdown">
+                    <a class="dropdown-head" href="javascript:void(0)">個人作品<img src="./images/arrow_drop_down.svg" alt="arrow_drop_down">
+                    </a>
+                    <div class="dropdown-list">
+                        <div class="dropdown-item">
+                            <a href="https://yan-peng.github.io/resume/" class="dropdown-content">作品1</a> 
+                            <a href="index.html" class="dropdown-content">作品2</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a href="contact.html">聯絡方式</a></li>
+            </ul>
+            <div class="line"></div>
+        </nav>
+    </header>
+    <main>
+        <section class="left">
+            <table>
+                <tr>
+                    <td>自我簡介</td>
+                    <td>願意嘗試自己沒做過的事情，工作遇到技術問題時通常請教前輩討論、網路搜尋，解決問題後願意提出與同事分享，或許也可以得到同事反饋，讓自己更精進。</td>
+                </tr>
+                <tr>
+                    <td>畢業學校</td>
+                    <td>元智大學資訊工程學系</td>
+                </tr>
+                <tr>
+                    <td>工作經歷</td>
+                    <td>軟體測試工程師(2017/5 ~ 2020/8)</td>
+                </tr>
+                <tr>
+                    <td>專長技能</td>
+                    <td>
+                        <img src="./images/icons8-html-5.svg" alt="html5" title="html">
+                        <img src="./images/icons8-css3.svg" alt="css" title="css">
+                        <img src="./images/icons8-javascript.svg" alt="javascript">
+                        <img src="./images/icons8-react-native.svg" alt="react">
+                    </td>
+                </tr>
+                <tr>
+                    <td>英文能力</td>
+                    <td>聽讀: 中等<br>
+                        說寫: 略懂<br>
+                        (多益成績: 765分)
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section class="right">
+            <img src="./images/myPic2.jpg" alt="myPic2">
+        </section>
+    </main>
+    <footer></footer>
+</body>
+<script src="./js/dropdown.js"></script>
+<!-- Fontawesome -->
+<script src="https://kit.fontawesome.com/b08ebb7628.js" crossorigin="anonymous"></script>
+</html>

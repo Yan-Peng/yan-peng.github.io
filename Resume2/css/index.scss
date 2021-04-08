@@ -1,0 +1,130 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+@import "./header.scss";
+@import "./footer.scss";
+
+html, body{
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.circle-1 {
+    position: absolute;
+    top: 0;
+    right: -50vh;
+    z-index: -1;
+}
+
+.circle-2 {
+    position: absolute;
+    bottom: -50%;
+    left: -20%;
+    z-index: -1;
+    opacity: 0.5;
+}
+
+
+main{
+    display: flex;
+    // width: 70%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 5rem;
+    // border: 1px red solid;
+    .left{
+        flex: 3 1 550px;
+        // width: 40%;
+        // margin-right: 10vw;
+        // border: 1px red solid;
+        padding: 2rem;
+        h1{
+            font-size: 2rem;
+        }
+        p{
+            text-indent: 2rem;
+            font-size: 1.5rem;
+        }
+    }
+
+    .right{
+        flex: 1 1 400px;
+        // width: 30%;
+        // border: 1px red solid;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        padding-left: 5rem;
+        img{
+            border-radius: 50%;
+            width: 20vw;
+            height: 20vw;
+        }
+
+        .subTitle{
+            width: 70%;
+            font-size: 1.5vw;
+            font-weight: bold;
+            background-color: #C4C4C4;
+            box-shadow:5px 8px #0F0E0E;
+            margin: 2rem;
+        }
+    } 
+}
+
+@media screen and (max-width: 950px){
+    html, body{
+        overflow-y: scroll;
+    }
+
+    .circle-1 {
+        position: absolute;
+        // top: -20vw;
+        // right: -100vh;
+        top: 0vw;
+        right: -50vh;
+        z-index: -1;
+        width: 100vh;
+        height: 100vh;
+        img{
+            width: 100%;
+        }
+    }
+
+    .circle-2 {
+        display: none;
+    }
+
+    main{
+        padding: 0;
+        .left{
+            flex: 1 1 350px;
+            padding: 5px;
+            h1{
+                font-size: 1.5rem;
+            }
+            p{
+                text-indent: 2rem;
+                font-size: 1rem;
+            }
+        }
+        .right{
+            flex: 1 1 350px;
+            padding: 0;
+            img{
+                border-radius: 50%;
+                width: 50vw;
+                height: 50vw;
+            }
+            .subTitle{
+                font-size: 4vw;
+                margin: 1rem;
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+footer{
+    
+    width: 100%;
+    text-align: center;
+    position: absolute;
+    bottom: 0;
+}
+
+footer::after{
+    content: "Bennis' works © 2021 Copyright";
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 950px){
+    footer{
+        position: static;
+    }
+}

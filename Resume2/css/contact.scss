@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+
+
+@import "./header.scss";
+@import "./footer.scss";
+
+main{
+    .submain{
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        
+        // border: 1px red solid;
+        .left{
+            flex: 1 1 500px;
+            
+            form{
+                display: flex;
+                flex-direction: column;
+                
+                input{
+                    margin-bottom: 1rem;
+                    font-size: 1.25rem;
+                    height: 5vh;
+                    width: 30vw;
+                    background-color: #FDC708;
+                    border: none;
+                }
+                textarea{
+                    font-size: 1.25rem;
+                    background-color: #FDC708;
+                    height: 30vh;
+                    width: 100%;
+                    border: none;
+                }
+                .btn{
+                    margin-top: 1rem;
+                    display: flex;
+                    justify-content: space-evenly;
+                    input{
+                        border: none;
+                        background-color: #FDC708;
+                        border-radius: 10px;
+                        width: 5vw;
+                    }
+                    
+                }
+            }
+            
+        }
+        .hLine{
+            width: 5px;
+            background-color: black;
+            margin-left: 2rem;
+            margin-right: 2rem;
+            height: 70vh;
+        }
+
+        .right{
+            flex: 1 1 500px;
+            p{
+                font-size: 2rem;
+                margin-bottom: 1rem;
+                .mail{
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 950px){
+    main{
+        .submain{
+            .left{
+                .btn{
+                    input{
+                        flex-basis: 100px;
+                    }
+                }
+            }
+
+            .hLine{
+                display: none;
+            }
+
+            .right{
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-hants-tw">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Bennis履歷表">
+    <meta name="author" content="Bennis">
+    <link rel="stylesheet" href="./css/contact.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+    <title>Bennis履歷表-聯絡方式</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">首頁</a></li>
+                <li><a href="resume.html">我的履歷</a></li>
+                <li>
+                    <i class="fas fa-bars" onclick="showList();"></i>
+                    <img src="./images/Bennis-font.png" alt="Logo" title="Logo"></li>
+                <li class="dropdown">
+                    <a class="dropdown-head" href="javascript:void(0)">個人作品<img src="./images/arrow_drop_down.svg" alt="arrow_drop_down">
+                    </a>
+                    <div class="dropdown-list">
+                        <div class="dropdown-item">
+                            <a href="https://yan-peng.github.io/resume/" class="dropdown-content">作品1</a> 
+                            <a href="index.html" class="dropdown-content">作品2</a>
+                        </div>
+                    </div>
+                </li>
+                <li><a class="active" href="contact.html">聯絡方式</a></li>
+            </ul>
+            <div class="line"></div>
+        </nav>
+    </header>
+    <main>
+        <div class="submain">
+            <section class="left">
+                <form action="">
+                    <input type="text" id="fname" name="fname" placeholder="姓名*"><br>
+                    <input type="tel" id="fphone" name="fphone" placeholder="電話*" pattern="[0-9]{2}-[0-9]{4}-[0-9]{4}"><br>
+                    <input type="email" id="femail" name="femail" placeholder="信箱*"><br>
+                    <textarea type="text" id="ftext" name="ftext" placeholder="想說的話*"></textarea><br>
+                    <div class="btn">
+                        <input type="submit" value="送出">
+                        <input type="reset" value="清除">
+                    </div>
+                </form>
+            </section>
+            <div class="hLine"></div>
+            <section class="right">
+                <p>Line: eiworu85746</p>
+                <p>Email: <span class="mail">1234567@gmail.com</span></p>
+                <p>聯絡時間: Mon~Fri , 9:00am~18:00pm</p>
+                <p>其他聯絡方式: IG</p>
+            </section>
+        </div>
+    </main>
+    <footer></footer>
+</body>
+<script src="./js/dropdown.js"></script>
+<!-- Fontawesome -->
+<script src="https://kit.fontawesome.com/b08ebb7628.js" crossorigin="anonymous"></script>
+</html>
